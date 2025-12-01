@@ -1,0 +1,142 @@
+{
+  "company": {
+    "name": "Pingbhai",
+    "overview": "PINGBHAI is a digital B2B platform revolutionizing procurement in India's electronics industry (ESDM & EMS). It addresses fragmentation and inefficiency by offering verified, structured product listings for equipment, factory consumables, and industrial software.",
+    "mission": "To make procurement smarter, faster, and cooler for Indian MSMEs by providing a human-centric platform with clean interfaces and AI guidance.",
+    "core_values": [
+      "Smart research before purchase",
+      "Clutter-free discovery",
+      "Trust & Verification",
+      "End-to-End Coverage"
+    ],
+    "contact": {
+      "support": "Dedicated onboarding & 'Ping Me' chat on listing pages",
+      "sales_partner": "Nextonic SMT Solutions Pvt. Ltd.",
+      "tech_partner": "GEL Media LLP"
+    }
+  },
+  "products": [
+    {
+      "name": "VEEFIX BGA Rework Station",
+      "model": "R6860",
+      "brand": "VEEFIX",
+      "category": "Soldering products / Equipment-New",
+      "description": "A robust, semi-automatic solution for high-precision BGA (Ball Grid Array) rework. Ideal for mobile, laptop, TV, and industrial PCB repair.",
+      "features": [
+        "Three-Zone Heating (Upper Hot Air, Lower Hot Air, Bottom IR)",
+        "Optical Alignment System with HD CCD Camera",
+        "Touch screen interface with password protection",
+        "Auto-alarm and dual over-temperature safety"
+      ],
+      "technical_specs": {
+        "BGA Size": "2x2 mm to 55x55 mm",
+        "Alignment Precision": "0.01 mm",
+        "Power": "220-240 VAC",
+        "Weight": "60 kg",
+        "Certifications": "CE, ISO 9001:2015"
+      },
+      "warranty": "12 Months",
+      "total_customers": 35,
+      "country_of_make": "India"
+    },
+    {
+      "name": "BAKON BK90 Soldering Station",
+      "model": "BK90",
+      "brand": "Bakon",
+      "category": "Soldering products / Equipment-New",
+      "description": "90W high-frequency soldering station tailored for lead-free soldering applications. Features rapid heat recovery and ESD safe design.",
+      "features": [
+        "PID Temperature Control (±2°C Accuracy)",
+        "Auto Sleep Function (10-60 mins)",
+        "Password Lock for temperature security",
+        "Large LCD Display"
+      ],
+      "technical_specs": {
+        "Power Output": "90W",
+        "Temp Range": "180°C - 480°C",
+        "Tip to Ground Resistance": "< 2 Ohms",
+        "Dimensions": "150 x 130 x 99 mm"
+      },
+      "warranty": "6-12 Months",
+      "total_customers": 70,
+      "country_of_make": "China"
+    },
+    {
+      "name": "Seamark XC1000 X-Ray Reel Counter",
+      "model": "XC1000",
+      "brand": "Seamark",
+      "category": "Inspection / Soldering products",
+      "description": "AI-powered offline X-Ray component counter. Counts SMD reels in under 10 seconds with 99.99% accuracy without unpacking.",
+      "features": [
+        "Non-destructive counting",
+        "AI-enhanced detection algorithm",
+        "Integration with MES/ERP/WMS systems",
+        "Ergonomic design with anti-pinch safety"
+      ],
+      "technical_specs": {
+        "X-Ray Tube": "30-80 kV, Micro-focus",
+        "Detector": "Flat Panel (FPD) 3072x3072 pixels",
+        "Reel Support": "7-15 inch diameter",
+        "Radiation Safety": "<1 µSv/h"
+      },
+      "warranty": "12 Months",
+      "total_customers": 150,
+      "country_of_make": "China"
+    }
+  ],
+  "platform_features": [
+    {
+      "feature": "Product Exploration",
+      "benefit": "Side-by-side comparisons of verified listings with specs and certifications."
+    },
+    {
+      "feature": "AI Agent ('Bhai')",
+      "benefit": "Personalized, natural language assistance for comparisons and queries."
+    },
+    {
+      "feature": "Inquiry Tools",
+      "benefit": "Get-quote button and quick chat connected to sales partners."
+    }
+  ],
+  "partners": [
+    {
+      "name": "Nextonic SMT Solutions Pvt. Ltd.",
+      "role": "Sales & Support",
+      "details": "Authorized distributor handling inquiries, quotes, deliveries, and SLAs."
+    },
+    {
+      "name": "GEL Media LLP",
+      "role": "Digital Media & Development",
+      "details": "Handles platform development and digital marketing strategies."
+    }
+  ],
+  "buyer_resources": {
+    "faqs": [
+      {
+        "q": "What is PINGBHAI?",
+        "a": "A procurement intelligence platform for ESDM/EMS, offering verified listings for equipment and consumables."
+      },
+      {
+        "q": "Do you sell directly?",
+        "a": "No, we connect you to our sales partner, Nextonic, for quotes and negotiations."
+      },
+      {
+        "q": "Can I request a demo?",
+        "a": "Yes, demos and trials are available via our partner for eligible products."
+      }
+    ]
+  },
+  "seller_resources": {
+    "onboarding_process": "1. Submit Info on /list-your-product/. 2. Team Review & Agreement Sign-off. 3. Go Live in 7-10 days.",
+    "faqs": [
+      {
+        "q": "What are the costs?",
+        "a": "Listing is free. Commercials are handled via contract with Nextonic."
+      },
+      {
+        "q": "What categories are eligible?",
+        "a": "SMT Equipment, Factory Consumables (solder, adhesives), and ESDM Software."
+      }
+    ]
+  }
+}
