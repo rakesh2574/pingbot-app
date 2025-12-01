@@ -1,11 +1,12 @@
 import json
 import os
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+# FIX: Updated imports for modern LangChain (v0.2/v0.3)
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_core.prompts import PromptTemplate
+from langchain_core.runnables import RunnablePassthrough
+from langchain_core.output_parsers import StrOutputParser
 from langchain_community.vectorstores import FAISS
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.prompts import PromptTemplate
-from langchain.schema.runnable import RunnablePassthrough
-from langchain.schema.output_parser import StrOutputParser
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from config import SYSTEM_PROMPT, BLOCKED_INTENTS, LLM_MODEL
 
 
