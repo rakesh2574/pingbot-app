@@ -1,142 +1,262 @@
-{
-  "company": {
-    "name": "Pingbhai",
-    "overview": "PINGBHAI is a digital B2B platform revolutionizing procurement in India's electronics industry (ESDM & EMS). It addresses fragmentation and inefficiency by offering verified, structured product listings for equipment, factory consumables, and industrial software.",
-    "mission": "To make procurement smarter, faster, and cooler for Indian MSMEs by providing a human-centric platform with clean interfaces and AI guidance.",
-    "core_values": [
-      "Smart research before purchase",
-      "Clutter-free discovery",
-      "Trust & Verification",
-      "End-to-End Coverage"
-    ],
-    "contact": {
-      "support": "Dedicated onboarding & 'Ping Me' chat on listing pages",
-      "sales_partner": "Nextonic SMT Solutions Pvt. Ltd.",
-      "tech_partner": "GEL Media LLP"
+[
+  {
+    "source_url": "https://ping.pingbhai.com/",
+    "page_title": "Homepage",
+    "content": "Pingbhai – Procurement Intelligence for Electronics Industry"
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/equipment/",
+    "page_title": "Equipment Listing",
+    "content": {
+      "filters": {
+        "brands": ["Juki", "Pemtron", "Genitec", "SMT Peripheral", "BBA", "Seamark"],
+        "countries": ["China", "India", "Japan", "Korea", "Taiwan"]
+      },
+      "categories": ["Equipment-New", "Equipment-Refurbished", "Equipment-Second-hand", "Consumables", "Software"],
+      "products_listed": [
+        {
+          "name": "BGA Rework station",
+          "category": "Soldering products / Equipment-New"
+        },
+        {
+          "name": "Soldering station",
+          "category": "Soldering products / Equipment-New"
+        },
+        {
+          "name": "X-Ray Counting machine",
+          "category": "Soldering products / Equipment-New"
+        }
+      ]
     }
   },
-  "products": [
-    {
-      "name": "VEEFIX BGA Rework Station",
-      "model": "R6860",
-      "brand": "VEEFIX",
-      "category": "Soldering products / Equipment-New",
-      "description": "A robust, semi-automatic solution for high-precision BGA (Ball Grid Array) rework. Ideal for mobile, laptop, TV, and industrial PCB repair.",
-      "features": [
-        "Three-Zone Heating (Upper Hot Air, Lower Hot Air, Bottom IR)",
-        "Optical Alignment System with HD CCD Camera",
-        "Touch screen interface with password protection",
-        "Auto-alarm and dual over-temperature safety"
-      ],
-      "technical_specs": {
-        "BGA Size": "2x2 mm to 55x55 mm",
-        "Alignment Precision": "0.01 mm",
-        "Power": "220-240 VAC",
-        "Weight": "60 kg",
-        "Certifications": "CE, ISO 9001:2015"
-      },
-      "warranty": "12 Months",
-      "total_customers": 35,
-      "country_of_make": "India"
-    },
-    {
-      "name": "BAKON BK90 Soldering Station",
-      "model": "BK90",
-      "brand": "Bakon",
-      "category": "Soldering products / Equipment-New",
-      "description": "90W high-frequency soldering station tailored for lead-free soldering applications. Features rapid heat recovery and ESD safe design.",
-      "features": [
-        "PID Temperature Control (±2°C Accuracy)",
-        "Auto Sleep Function (10-60 mins)",
-        "Password Lock for temperature security",
-        "Large LCD Display"
-      ],
-      "technical_specs": {
-        "Power Output": "90W",
-        "Temp Range": "180°C - 480°C",
-        "Tip to Ground Resistance": "< 2 Ohms",
-        "Dimensions": "150 x 130 x 99 mm"
-      },
-      "warranty": "6-12 Months",
-      "total_customers": 70,
-      "country_of_make": "China"
-    },
-    {
-      "name": "Seamark XC1000 X-Ray Reel Counter",
-      "model": "XC1000",
-      "brand": "Seamark",
-      "category": "Inspection / Soldering products",
-      "description": "AI-powered offline X-Ray component counter. Counts SMD reels in under 10 seconds with 99.99% accuracy without unpacking.",
-      "features": [
-        "Non-destructive counting",
-        "AI-enhanced detection algorithm",
-        "Integration with MES/ERP/WMS systems",
-        "Ergonomic design with anti-pinch safety"
-      ],
-      "technical_specs": {
-        "X-Ray Tube": "30-80 kV, Micro-focus",
-        "Detector": "Flat Panel (FPD) 3072x3072 pixels",
-        "Reel Support": "7-15 inch diameter",
-        "Radiation Safety": "<1 µSv/h"
-      },
-      "warranty": "12 Months",
-      "total_customers": 150,
-      "country_of_make": "China"
+  {
+    "source_url": "https://ping.pingbhai.com/equipment-pi/",
+    "page_title": "Product Intelligence",
+    "content": {
+      "available_modules": [
+        {"product": "X-Ray Counting machine", "features": ["Training", "Troubleshoot"]},
+        {"product": "BGA Rework station", "features": ["Training", "Troubleshoot"]},
+        {"product": "Soldering station", "features": ["Training", "Troubleshoot"]}
+      ]
     }
-  ],
-  "platform_features": [
-    {
-      "feature": "Product Exploration",
-      "benefit": "Side-by-side comparisons of verified listings with specs and certifications."
-    },
-    {
-      "feature": "AI Agent ('Bhai')",
-      "benefit": "Personalized, natural language assistance for comparisons and queries."
-    },
-    {
-      "feature": "Inquiry Tools",
-      "benefit": "Get-quote button and quick chat connected to sales partners."
-    }
-  ],
-  "partners": [
-    {
-      "name": "Nextonic SMT Solutions Pvt. Ltd.",
-      "role": "Sales & Support",
-      "details": "Authorized distributor handling inquiries, quotes, deliveries, and SLAs."
-    },
-    {
-      "name": "GEL Media LLP",
-      "role": "Digital Media & Development",
-      "details": "Handles platform development and digital marketing strategies."
-    }
-  ],
-  "buyer_resources": {
-    "faqs": [
-      {
-        "q": "What is PINGBHAI?",
-        "a": "A procurement intelligence platform for ESDM/EMS, offering verified listings for equipment and consumables."
-      },
-      {
-        "q": "Do you sell directly?",
-        "a": "No, we connect you to our sales partner, Nextonic, for quotes and negotiations."
-      },
-      {
-        "q": "Can I request a demo?",
-        "a": "Yes, demos and trials are available via our partner for eligible products."
-      }
-    ]
   },
-  "seller_resources": {
-    "onboarding_process": "1. Submit Info on /list-your-product/. 2. Team Review & Agreement Sign-off. 3. Go Live in 7-10 days.",
-    "faqs": [
-      {
-        "q": "What are the costs?",
-        "a": "Listing is free. Commercials are handled via contract with Nextonic."
-      },
-      {
-        "q": "What categories are eligible?",
-        "a": "SMT Equipment, Factory Consumables (solder, adhesives), and ESDM Software."
+  {
+    "source_url": "https://ping.pingbhai.com/list-your-product/",
+    "page_title": "List Your Product",
+    "content": "Getting your products listed on the Pingbhai platform is simple and straightforward. To begin, please share some basic information about your organization and the products you wish to showcase. Use the 'Submit Form' option below to initiate the process. Our team will review your submission and promptly get in touch with you to guide you through the next steps. For quick queries or assistance, feel free to reach out via the 'Ping Me' chat feature. Refer to our Seller FAQ page for more details on seller onboarding and product listing procedures."
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/sellers/",
+    "page_title": "Our Partners (Sellers)",
+    "content": {
+      "description": "We partner with the best manufacturers and suppliers across the globe. Our strong partnerships are aligned for progressive client growth.",
+      "partner_brands": ["Bakon", "VEEFIX", "Seamark"]
+    }
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/insights/",
+    "page_title": "Insights",
+    "content": {
+      "posts": [
+        {"title": "Why do we use it", "excerpt": "It is a long established fact that a reader will be distracted by the readable content of a page when..."},
+        {"title": "What is Lorem Ipsum", "excerpt": "Lorem Ipsum is simply dummy text of the printing and typesetting industry..."}
+      ]
+    }
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/our-story/",
+    "page_title": "Our Story",
+    "content": "We are a team of young professionals united by a shared passion for the electronics industry — especially its remarkable growth story in India. With backgrounds spanning product design, development, sourcing, sales, business strategy, marketing, and turnkey project execution, we've each played a part in shaping this vibrant sector.\n\nThrough our collective experience, we've witnessed the inner workings of the Electronics System Design & Manufacturing (ESDM) and Electronics Manufacturing Services (EMS) ecosystems. And along the way, one challenge consistently stood out — procurement.\n\nDespite being a backbone of operations, procurement in this sector remains deeply fragmented and painfully inefficient. In India, especially, decision-makers still struggle with outdated sourcing practices, scattered product data, and a lack of reliable, organized information.\n\nThat's where PINGBHAI steps in. We're building a digital platform that brings clarity, speed, and intelligence to industrial procurement — all grounded in a simple philosophy: Smart research before purchase.\n\nFrom clutter-free product discovery to clean interfaces, verified products, meaningful specifications, rich visuals, and AI-powered assistance — we're transforming how ESDM and EMS companies explore and evaluate products. No noise. Just insights.\n\nThis is more than just solving a problem. It's about empowering procurement professionals with tools that are not only smart and modern but refreshingly human-centric."
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/why-pingbhai/",
+    "page_title": "Why Choose PINGBHAI",
+    "content": {
+      "value_propositions": [
+        {"title": "Purpose-Built for the Electronics Industry", "description": "Designed to eliminate chaos and bring structure to sourcing in ESDM and EMS operations."},
+        {"title": "End-to-End Coverage", "description": "Discover every essential product — from industrial hardware to operational software — all in one place."},
+        {"title": "Smart Research Before Purchase", "description": "Empowered by data, guided by insight — enabling confident decisions with minimal effort."},
+        {"title": "Clutter-Free Product Discovery", "description": "Navigate with ease through a modern, intuitive interface that surfaces only what matters."},
+        {"title": "Verified Products and Trusted Sellers", "description": "Every listing is quality-checked, every vendor is pre-screened — so you can browse with confidence."},
+        {"title": "Streamlined Sales & Support", "description": "Backed by vetted processes for post-sale support, inquiry handling, and lead management."},
+        {"title": "A Game-Changer for Sellers", "description": "A centralized, high-quality lead generation platform tailored for industrial electronics."},
+        {"title": "Powered by Generative AI", "description": "Built on next-gen AI to simplify comparisons, surface insights, and personalize user experience."}
+      ]
+    }
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/channel-partners/",
+    "page_title": "Channel Partners",
+    "content": {
+      "partners": [
+        {
+          "name": "Nextonic SMT Solutions Pvt. Ltd.",
+          "role": "Sales and Support Partner",
+          "website": "https://nextonicsmtindia.com",
+          "description": "A trusted name in the Indian Electronics industry, known for its expertise in delivering high-quality support and distribution services. As authorized distributors for several global brands in the ESDM and EMS sectors, Nextonic manages all sales and product support operations for inquiries originating from the PINGBHAI platform."
+        },
+        {
+          "name": "GEL Media LLP",
+          "role": "Digital Media and Marketing Solutions Partner",
+          "website": "https://gelmedia.in",
+          "description": "Has a proven track record of delivering impactful digital media and marketing solutions for the Electronics and Technology industries across India and global markets. As Pingbhai's official media partner, GEL Media supports both sellers and buyers on the platform with tailored media strategies and promotional services."
+        }
+      ]
+    }
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/buyer-faq/",
+    "page_title": "Buyer FAQ",
+    "content": {
+      "faqs": [
+        {"q": "What is PINGBHAI, and how does it help me as a procurement professional?", "a": "PINGBHAI is a procurement intelligence platform built specifically for India's electronics design and manufacturing sector (ESDM & EMS). It simplifies your product research process by giving you access to simplified, verified, structured, and comparable product listings for equipment, consumables, and industrial software products."},
+        {"q": "What kind of products can I explore on PINGBHAI?", "a": "Electronics manufacturing equipment (including refurbished and second-hand options), factory consumables (e.g., soldering materials, adhesives, solvents), and software products for ESDM operations. Note: We do not list raw materials like semiconductors, base materials and other components."},
+        {"q": "How does PINGBHAI ensure the credibility of the listed products?", "a": "All product listings are verified by the PINGBHAI team. Manufacturers and suppliers provide detailed specifications, certifications (like BIS, RoHS etc), support capabilities, and client credentials of every product listed."},
+        {"q": "Can I compare products from different brands?", "a": "Yes. PINGBHAI presents product parameters like technical specs, key features, warranty terms, installation base, and country of origin — enabling side-by-side comparisons."},
+        {"q": "Does PINGBHAI sell the products directly?", "a": "No. PINGBHAI helps you discover the right-fit products and then connects you with our dedicated sales partner NEXTONIC SMT SOLUTIONS INDIA PVT LTD who handles quotations, negotiations, and deliveries."},
+        {"q": "How can I raise a product enquiry?", "a": "Each product listing includes a Get-quote option as well as a quick chat option. Once you raise a request, the sales partner NEXTONIC will respond with product-specific support and quotation details."},
+        {"q": "Are the suppliers and brands listed on PINGBHAI India-based?", "a": "Not necessarily. Many are global manufacturers and suppliers, but all listed sellers are authorized to supply to India and meet relevant import and compliance requirements."},
+        {"q": "Does the platform help with post-sale support?", "a": "Yes. The suppliers on PINGBHAI are bound by a Service Level Agreement (SLA) with Nextonic that ensures pre-sale and post-sale support, including warranty, service, and escalation paths."},
+        {"q": "Can I request a demo or sample?", "a": "In most cases, yes. Certain products allow demo or trial requests. These can be coordinated through Nextonic."},
+        {"q": "Is there a cost to use PINGBHAI as a buyer?", "a": "No. The platform is completely free to use. You can browse, compare, and enquire about products without any charges or subscription."}
+      ]
+    }
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/seller-faq/",
+    "page_title": "Seller FAQ",
+    "content": {
+      "faqs": [
+        {"q": "What is PINGBHAI?", "a": "PINGBHAI is a custom-made web & mobile based platform for Indian Electronics industry, developed and promoted by GEL MEDIA LLP and NEXTONIC SMT SOLUTIONS PVT LTD. It enables procurement decision-makers in electronics design and manufacturing companies to access simplified, structured, verified, and insightful information about equipment, consumables, and software products."},
+        {"q": "Who uses this platform?", "a": "Procurement heads, purchase managers, engineers/technical staff, and CXOs in Indian electronics design and manufacturing companies."},
+        {"q": "What are the benefits of listing my products?", "a": "Your products gain targeted visibility among qualified B2B buyers in the Indian Electronics Industry, helping increase inbound leads and accelerate sales opportunities without requiring you to set up your own marketing and sales infrastructure."},
+        {"q": "Is PINGBHAI involved in direct product sales?", "a": "No. PINGBHAI only facilitates procurement decisions through product insights and generates leads. Actual sales operations are carried out by NEXTONIC SMT SOLUTIONS INDIA PVT LTD."},
+        {"q": "How can I get onboarded?", "a": "Share your company and products information, sign a Manufacturer/Supplier Listing Agreement, and sign a Service Level Agreement (SLA) that outlines pre-sales and post-sales support responsibilities."},
+        {"q": "What product information do I need to provide?", "a": "Product names & model numbers, pricing details, description and pictures, country of make and warranty terms, detailed specifications and datasheets, client credentials, compliance & certification documentation, and support/service details."},
+        {"q": "What product categories can be listed?", "a": "Electronics manufacturing equipment (new, refurbished, second-hand), factory consumables (solder materials, adhesives, solvents, tapes), and industrial software products for ESDM industry."},
+        {"q": "Do I need an Indian office to list products?", "a": "No, but your company must be authorized to export to India and meet relevant regulatory standards (BIS, RoHS, CPCB, WPC, DPDP etc)."},
+        {"q": "What quality and support commitments must I fulfill?", "a": "The SLA includes: timely responses during buyer evaluation, availability of authorized documentation for compliance, defined support levels post-sale including hotline and ticket response times, and warranty and escalation processes."},
+        {"q": "Can I update or remove products later?", "a": "Yes. Once onboarded, you can work with the PINGBHAI team to edit, replace, or remove product listings through a structured update process."},
+        {"q": "Is there a fee for listing products?", "a": "No. Listing is 100% free. Sales commercials need to be agreed with Nextonic in a separate contract. Premium features in future may have nominal charges."},
+        {"q": "What is the typical listing timeline?", "a": "Once agreements are signed and data is submitted, your products can be live within 7–10 business days."}
+      ]
+    }
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/privacy-policy/",
+    "page_title": "Privacy Policy",
+    "content": {
+      "effective_date": "01-07-2025",
+      "last_updated": "01-07-2025",
+      "summary": {
+        "scope": "Applies to all users of the Pingbhai platform, including procurement professionals, sellers, and channel partners.",
+        "data_collected": ["Contact Information (name, email, phone, company)", "Business Details (product listings, certifications, catalogs)", "Usage Data (IP, browser, pages visited)", "Communications (emails, chats, forms)"],
+        "purposes": ["Facilitate product listings and connect buyers with suppliers", "Respond to queries and support requests", "Provide personalized experience", "Improve platform functionality and security", "Compliance and fraud prevention"],
+        "data_sharing": ["Authorized channel partners", "Third-party service providers (analytics, hosting, CRM)", "Regulatory authorities when required by law"],
+        "user_rights": ["Access personal data", "Request correction or deletion", "Withdraw consent", "Object to direct marketing"],
+        "contact": "privacy@pingbhai.com"
       }
-    ]
+    }
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/equipment-category/new/",
+    "page_title": "New Equipment",
+    "content": {
+      "products": [
+        {"name": "BGA Rework station", "category": "Soldering products / Equipment-New"},
+        {"name": "Soldering station", "category": "Soldering products / Equipment-New"},
+        {"name": "X-Ray Counting machine", "category": "Soldering products / Equipment-New"}
+      ]
+    }
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/equipment-category/refurbished/",
+    "page_title": "Refurbished Equipment",
+    "content": "No Products Found"
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/equipment-category/second-handed/",
+    "page_title": "Second-hand Equipment",
+    "content": "No Products Found"
+  },
+  {
+    "source_url": "https://ping.pingbhai.com/equipment/bga-rework-station/",
+    "page_title": "BGA Rework Station - Product Detail",
+    "content": {
+      "product_info": {
+        "name": "BGA Rework Station",
+        "model": "R6860",
+        "brand": "VEEFIX",
+        "country_of_make": "India",
+        "category": "Soldering products / Equipment-New",
+        "warranty": "12 Months",
+        "total_customers": 35,
+        "certifications": ["CE certified", "ISO 9001:2015"]
+      },
+      "description": "The BGA Rework Station R6860 is a robust, semi-automatic solution for high-precision BGA (Ball Grid Array) rework across a wide range of applications—from PCB assembly and repair to sophisticated electronics production lines.",
+      "key_features": [
+        {
+          "title": "Three-Zone Heating System",
+          "details": "Upper & lower hot air with bottom infrared (IR) control ensures even heating across the PCB. Independent temperature control with 8-segment profiles and ±1°C accuracy."
+        },
+        {
+          "title": "Precision Optical Alignment",
+          "details": "High-definition CCD color camera + 15\" HD monitor for real-time visibility. X/Y and rotate (R) axes micrometer fine-tuning accuracy to 0.01 mm. Automatic adjustment for color aberration and brightness."
+        },
+        {
+          "title": "Human-Friendly Touch Interface",
+          "details": "Intuitive touchscreen control managing heating, alignment, and rework stages. Combines upper heating and mounting heads into a single 2-in-1 mechanism."
+        },
+        {
+          "title": "Advanced Safety & Access Control",
+          "details": "Automatic alarm post-BGA heat cycle. Double over-temperature protection for added safety. Password-protected settings to prevent unauthorized changes."
+        }
+      ],
+      "applications": [
+        "Reballing and chip replacement for mobile, laptop, TV, automotive, and industrial BGAs",
+        "Precision electronics repair, including motherboard and logic board rework",
+        "High-throughput BGA handling for production, prototyping, and R&D environments"
+      ],
+      "capabilities": {
+        "bga_size_range": "2 mm × 2 mm to 55 mm × 55 mm",
+        "functions": ["Desoldering", "Cleaning pads", "Re-soldering new chips"]
+      },
+      "technical_specs": {
+        "heating_zones": "Upper hot air, lower hot air, bottom IR",
+        "temperature_profile_control": "8-segment profile, independent control, ±1°C precision",
+        "bga_size_range": "2 × 2 mm to 55 × 55 mm",
+        "optical_feedback": "HD CCD color camera with 15\" monitor",
+        "alignment_precision": "X/Y/R micrometer, 0.01 mm resolution",
+        "interface": "Multi-functional touchscreen",
+        "safety_controls": "Auto-alarm, dual over-temperature safety, password-lock",
+        "station_weight": "~60 kg",
+        "power_supply": "220–240 VAC",
+        "color_finish": "White enclosure",
+        "unit_dimensions": "Approx. width: 630 mm; height: 850 mm; length: 650 mm"
+      },
+      "benefits": [
+        "High Precision: Camera-guided and micrometer alignment ensures optimal BGA placement and solder quality",
+        "Flexibility: Supports small to large BGA types and can adapt to various board configurations",
+        "Efficiency: Semi-automatic operations reduce rework time and defects",
+        "Safety First: Dual temperature protection and alarms safeguard operators and components",
+        "Operator Control: Easy-to-use interface with password protection",
+        "Wide Applicability: Ideal for electronics workshops, field-service centers, and production labs"
+      ],
+      "package_contents": [
+        "R6860 Rework Station (Base Unit)",
+        "Touchscreen control panel",
+        "Camera assembly with alignment monitor",
+        "Hot-air and infrared heating heads",
+        "Micrometer-adjustable alignment platform",
+        "Consumables (flux, alignment tools)",
+        "User guide, power cord, and calibration certificates"
+      ],
+      "recommended_users": [
+        "Tech workshops – repair phones, tablets, motherboards",
+        "SMT production – sample reworks, prototype builds",
+        "R&D labs – test and develop BGA-based designs",
+        "Field service teams – portable platform for on-site repair"
+      ]
+    }
   }
-}
+]
