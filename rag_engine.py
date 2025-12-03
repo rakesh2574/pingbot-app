@@ -67,6 +67,28 @@ class PingbhaiRAG:
             except:
                 pass
 
+    # --- HELPER: Extract text from nested content ---
+    def _flatten_content(self, content, prefix=""):
+        """Recursively flatten nested dicts/lists into readable text."""
+        if isinstance(content, str):
+            return content
+        elif isinstance(content, list):
+            parts = []
+            for item in content:
+                parts.append(self._flatten_content(item, prefix))
+            return "\n".join(parts)
+        elif isinstance(content, dict):
+            parts = []
+            for key, value in content.items():
+                flat_value = self._flatten_content(value, f"{key}: ")
+                if isinstance(value, (dict, list)):
+                    parts.append(f"{key}:\n{flat_value}")
+                else:
+                    parts.append(f"{key}: {flat_value}")
+            return "\n".join(parts)
+        else:
+            return str(content)
+
     # --- CORE RAG ---
     def load_and_process_data(self):
         if not os.path.exists(self.kb_path):
@@ -77,36 +99,77 @@ class PingbhaiRAG:
 
         documents = []
 
-        # 1. Company
-        company = data.get("company", {})
-        documents.append(
-            f"Company: {company.get('name')}\nOverview: {company.get('overview')}\nMission: {company.get('mission')}\nValues: {', '.join(company.get('core_values', []))}")
+        # Handle list-based JSON structure (array of page objects)
+        if isinstance(data, list):
+            for page in data:
+                page_title = page.get("page_title", "Unknown Page")
+                source_url = page.get("source_url", "")
+                content = page.get("content", "")
 
-        # 2. Products
-        for product in data.get("products", []):
-            content = f"Product: {product['name']}\nBrand: {product.get('brand')} | Model: {product.get('model')}\nCategory: {product['category']}\nDescription: {product['description']}\nFeatures: {', '.join(product.get('features', []))}\n"
-            if "technical_specs" in product:
-                specs = product['technical_specs']
-                spec_str = ", ".join([f"{k}: {v}" for k, v in specs.items()])
-                content += f"Specs: {spec_str}\n"
-            content += f"Warranty: {product.get('warranty', 'N/A')}\nCustomers: {product.get('total_customers', 'N/A')}\nOrigin: {product.get('country_of_make', 'N/A')}\n"
-            documents.append(content)
+                # Flatten the content (handles nested dicts/lists)
+                flat_content = self._flatten_content(content)
 
-        # 3. Features & Resources
-        for feat in data.get("platform_features", []):
-            documents.append(f"Feature: {feat['feature']}\nBenefit: {feat['benefit']}")
+                # Build a document entry
+                doc_text = f"Page: {page_title}\nSource: {source_url}\n\n{flat_content}"
+                documents.append(doc_text)
 
-        buyer_res = data.get("buyer_resources", {})
-        for faq in buyer_res.get("faqs", []):
-            documents.append(f"Buyer FAQ: Q: {faq['q']} A: {faq['a']}")
+        # Handle dict-based JSON structure (original expected format)
+        elif isinstance(data, dict):
+            # 1. Company
+            company = data.get("company", {})
+            if company:
+                documents.append(
+                    f"Company: {company.get('name', 'N/A')}\n"
+                    f"Overview: {company.get('overview', 'N/A')}\n"
+                    f"Mission: {company.get('mission', 'N/A')}\n"
+                    f"Values: {', '.join(company.get('core_values', []))}"
+                )
 
-        seller_res = data.get("seller_resources", {})
-        documents.append(f"Seller Onboarding: {seller_res.get('onboarding_process')}")
-        for faq in seller_res.get("faqs", []):
-            documents.append(f"Seller FAQ: Q: {faq['q']} A: {faq['a']}")
+            # 2. Products
+            for product in data.get("products", []):
+                content = (
+                    f"Product: {product.get('name', 'N/A')}\n"
+                    f"Brand: {product.get('brand', 'N/A')} | Model: {product.get('model', 'N/A')}\n"
+                    f"Category: {product.get('category', 'N/A')}\n"
+                    f"Description: {product.get('description', 'N/A')}\n"
+                    f"Features: {', '.join(product.get('features', []))}\n"
+                )
+                if "technical_specs" in product:
+                    specs = product['technical_specs']
+                    spec_str = ", ".join([f"{k}: {v}" for k, v in specs.items()])
+                    content += f"Specs: {spec_str}\n"
+                content += (
+                    f"Warranty: {product.get('warranty', 'N/A')}\n"
+                    f"Customers: {product.get('total_customers', 'N/A')}\n"
+                    f"Origin: {product.get('country_of_make', 'N/A')}\n"
+                )
+                documents.append(content)
 
-        for partner in data.get("partners", []):
-            documents.append(f"Partner: {partner['name']}\nRole: {partner['role']}\nDetails: {partner['details']}")
+            # 3. Features & Resources
+            for feat in data.get("platform_features", []):
+                documents.append(f"Feature: {feat.get('feature', 'N/A')}\nBenefit: {feat.get('benefit', 'N/A')}")
+
+            buyer_res = data.get("buyer_resources", {})
+            for faq in buyer_res.get("faqs", []):
+                documents.append(f"Buyer FAQ: Q: {faq.get('q', '')} A: {faq.get('a', '')}")
+
+            seller_res = data.get("seller_resources", {})
+            if seller_res.get('onboarding_process'):
+                documents.append(f"Seller Onboarding: {seller_res.get('onboarding_process')}")
+            for faq in seller_res.get("faqs", []):
+                documents.append(f"Seller FAQ: Q: {faq.get('q', '')} A: {faq.get('a', '')}")
+
+            for partner in data.get("partners", []):
+                documents.append(
+                    f"Partner: {partner.get('name', 'N/A')}\n"
+                    f"Role: {partner.get('role', 'N/A')}\n"
+                    f"Details: {partner.get('details', 'N/A')}"
+                )
+        else:
+            raise ValueError(f"Unsupported knowledge base format: expected list or dict, got {type(data).__name__}")
+
+        if not documents:
+            raise ValueError("No documents were extracted from the knowledge base.")
 
         # Build Vector Store
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
